@@ -1,4 +1,4 @@
--- 5.2 Forecast short-term demand using 3-month moving average per spare part
+-- Forecast short-term demand using 3-month moving average per spare part
 
 -- requires SparePartUsage(SparePartID, Quantity, UsageDate)
 WITH monthly AS (
