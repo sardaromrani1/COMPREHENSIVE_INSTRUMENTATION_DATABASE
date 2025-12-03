@@ -1,5 +1,5 @@
--- 6 — Safety / Trip Instrument Analytics
--- 6.1 Trip instrument coverage per process unit (percent of instruments that are trip-capable)
+-- Safety / Trip Instrument Analytics
+-- Trip instrument coverage per process unit (percent of instruments that are trip-capable)
 
 WITH totals AS (
   SELECT
