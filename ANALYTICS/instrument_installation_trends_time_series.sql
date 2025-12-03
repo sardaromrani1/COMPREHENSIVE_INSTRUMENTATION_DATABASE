@@ -1,5 +1,5 @@
--- 3 — Time-series & trends (installations, additions)
--- 3.1 Monthly installations trend (last 24 months) + moving average (window)
+-- Time-series & trends (installations, additions)
+-- Monthly installations trend (last 24 months) + moving average (window)
 
 WITH monthly AS (
   SELECT
