@@ -1,5 +1,5 @@
--- 9 — Combining PIVOT + Window: Dashboard-ready table
--- 9.1 Instruments by Type per Site (PIVOT)
+-- Combining PIVOT + Window: Dashboard-ready table
+-- Instruments by Type per Site (PIVOT)
 
 SELECT SiteName, ISNULL([Pressure],0) AS Pressure, ISNULL([Flow],0) AS Flow, ISNULL([Level],0) AS Level, ISNULL([Temperature],0) AS Temperature
 FROM (
