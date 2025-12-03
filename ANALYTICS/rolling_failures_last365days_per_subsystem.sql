@@ -1,4 +1,4 @@
--- 4.2 Rolling count of failures (last 365 days) per subsystem (window + partition)
+-- Rolling count of failures (last 365 days) per subsystem (window + partition)
 
 WITH recent_failures AS (
   SELECT mr.MaintenanceID, mr.InstrumentID, mr.CompletionDate, i.SubSystemID
