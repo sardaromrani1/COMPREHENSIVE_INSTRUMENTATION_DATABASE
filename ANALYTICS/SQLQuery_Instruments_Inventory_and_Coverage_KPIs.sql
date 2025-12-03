@@ -1,4 +1,4 @@
--- 1 — Inventory & Coverage KPIs
+-- 1 â€” Inventory & Coverage KPIs
 -- 1.1 Instruments per Site / Process Unit / Subsystem (single query, aggregates + window)
 
 WITH counts AS (
