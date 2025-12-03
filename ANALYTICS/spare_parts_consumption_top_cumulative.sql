@@ -1,5 +1,5 @@
--- 5 — Spare Parts & Consumption Analytics
--- 5.1 Top spare parts by consumption and running total
+-- Spare Parts & Consumption Analytics
+-- Top spare parts by consumption and running total
 
 WITH usage_totals AS (
   SELECT sp.SparePartID, sp.PartName, SUM(sp.AnnualUsage) AS TotalUsed
