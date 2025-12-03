@@ -1,5 +1,5 @@
--- 4 — Maintenance & Reliability (if you add MaintenanceRecords)
--- 4.1 Mean Time Between Failures (MTBF) & Mean Time To Repair (MTTR) per instrument
+-- Maintenance & Reliability (if you add MaintenanceRecords)
+-- Mean Time Between Failures (MTBF) & Mean Time To Repair (MTTR) per instrument
 
 WITH failures AS (
   SELECT InstrumentID, CompletionDate, DowntimeDuration_Hours,
