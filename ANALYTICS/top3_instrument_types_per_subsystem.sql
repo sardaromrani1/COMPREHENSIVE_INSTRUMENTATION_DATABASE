@@ -1,4 +1,4 @@
--- 7 — Top-N & “Top 3 per Subsystem” (useful for spare allocation)
+-- 7 â€” Top-N & â€œTop 3 per Subsystemâ€ (useful for spare allocation)
 -- 7.1 Top 3 instrument types by count per subsystem (ROW_NUMBER)
 
 WITH type_counts AS (
