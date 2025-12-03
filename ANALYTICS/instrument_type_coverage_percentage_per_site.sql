@@ -1,4 +1,4 @@
--- 1.2 % Coverage by Instrument Type per Site (percent of site total)
+-- % Coverage by Instrument Type per Site (percent of site total)
 
 WITH t AS (
   SELECT
