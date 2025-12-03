@@ -1,5 +1,5 @@
--- 7 — Top-N & “Top 3 per Subsystem” (useful for spare allocation)
--- 7.1 Top 3 instrument types by count per subsystem (ROW_NUMBER)
+-- Top-N & “Top 3 per Subsystem” (useful for spare allocation)
+-- Top 3 instrument types by count per subsystem (ROW_NUMBER)
 
 WITH type_counts AS (
   SELECT ss.SubSystemID, ss.SubSystemName, it.TypeName, COUNT(i.InstrumentID) AS TypeCount,
