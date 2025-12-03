@@ -1,5 +1,5 @@
--- 10 — Operational Reports & Automation
--- 10.1 Stored procedure to return top N critical instruments (example)
+--  Operational Reports & Automation
+--  Stored procedure to return top N critical instruments (example)
 
 CREATE PROCEDURE dbo.sp_GetTopCriticalInstruments
   @TopN INT = 50
