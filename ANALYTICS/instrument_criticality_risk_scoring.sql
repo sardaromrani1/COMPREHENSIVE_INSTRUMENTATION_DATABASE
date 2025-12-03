@@ -1,5 +1,5 @@
--- 2 — Criticality & Risk Scoring (combine multi-factors)
--- 2.1 Create a type-weight mapping (inline) and compute score
+-- Criticality & Risk Scoring (combine multi-factors)
+-- Create a type-weight mapping (inline) and compute score
 
 -- adjust weights per your engineering judgement
 WITH type_weights AS (
