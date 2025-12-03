@@ -1,5 +1,5 @@
--- 8 — Percentiles & Bucketing (NTILE)
--- 8.1 Bucket instruments into 4 risk tiers by criticality score (NTILE)
+-- Percentiles & Bucketing (NTILE)
+-- Bucket instruments into 4 risk tiers by criticality score (NTILE)
 
 -- reuse criticality calculation as inline CTE
 WITH type_weights AS (
