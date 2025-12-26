@@ -1,0 +1,13 @@
+CREATE TABLE AlarmConfig(
+	AlarmConfigID INT IDENTITY(1, 1) PRIMARY KEY,
+	InstrumentID INT NOT NULL,
+	ParameterName NVARCHAR(100) NOT NULL,
+	ThresholdValue DECIMAL(18, 4) NOT NULL,
+	ComparisonOperator NVARCHAR(10) NOT NULL,
+	AlarmPriority TINYINT NOT NULL,
+	Description NVARCHAR(255),
+	IsActive BIT NOT NULL DEFAULT 1,
+	CreatedAt DATETIME2 NOT NULL 
+    CONSTRAINT DF_TableName_CreatedAt DEFAULT SYSDATETIME()
+
+)
