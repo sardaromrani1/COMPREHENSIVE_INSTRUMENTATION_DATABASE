@@ -1,0 +1,6 @@
+CREATE TABLE FailureType(
+	FailureTypeID INT IDENTITY(1, 1) PRIMARY KEY,
+	FailureCategory NVARCHAR(50) NOT NULL,
+	FailureTypeName NVARCHAR(100) NOT NULL,
+	Description NVARCHAR(255)
+);

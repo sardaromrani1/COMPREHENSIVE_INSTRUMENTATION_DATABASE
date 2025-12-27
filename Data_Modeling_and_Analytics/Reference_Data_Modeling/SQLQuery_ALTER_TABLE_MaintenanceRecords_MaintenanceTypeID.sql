@@ -1,0 +1,4 @@
+ALTER TABLE MaintenanceRecords
+ADD CONSTRAINT FK_MaintenanceRecords_MaintenanceType
+FOREIGN KEY (MaintenanceTypeID)
+REFERENCES MaintenanceType (MaintenanceTypeID);
