@@ -1,0 +1,6 @@
+CREATE TABLE Severity(
+	SeverityID INT IDENTITY(1, 1) PRIMARY KEY,
+	SeverityLevel NVARCHAR(20) NOT NULL UNIQUE,
+	SeverityScore TINYINT NOT NULL,
+	Description NVARCHAR(255)
+);

@@ -1,0 +1,5 @@
+CREATE TABLE MaintenanceResult(
+	ResultID INT IDENTITY(1, 1) PRIMARY KEY,
+	ResultCode NVARCHAR(50) NOT NULL UNIQUE,
+	Description NVARCHAR(255)
+);
