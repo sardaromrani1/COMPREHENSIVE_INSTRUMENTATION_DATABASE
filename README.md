@@ -1,267 +1,233 @@
-# Comprehensive Instrumentation & Maintenance Database
-
-SQL Server–Based Industrial Analytics Solution
-
-## 1. Project Definition (Business Perspective)
-### Problem Statement
-
-Industrial plants (refineries, power plants, process industries) generate large volumes of instrumentation and maintenance data, but this data is often:
-
-Fragmented across systems
-
-Poorly structured for analysis
-
-Difficult to use for reliability KPIs and decision-making
-
-As a result, maintenance teams struggle to:
-
-Measure equipment reliability
-
-Analyze downtime and failure patterns
-
-Control maintenance costs
-
-Forecast spare-part demand
-
-### Solution Overview
-
-This project implements a SQL Server–based relational database designed specifically to support:
-
-Instrumentation asset management
-
-Maintenance history tracking
-
-Downtime and failure analysis
-
-Reliability and cost KPIs
-
-Analytics-ready views for BI and reporting tools
-
-The database is designed to act as a single source of truth for maintenance and reliability analytics in an industrial environment.
-
-### Business Value
-
-The solution enables organizations to:
-
-Monitor MTTR (Mean Time To Repair)
-
-Quantify downtime impact
-
-Analyze maintenance cost and labor
-
-Support data-driven maintenance planning
-
-Provide clean, structured data for dashboards and analytics
-
-## 2. Technology Stack
-
-Database Platform: Microsoft SQL Server
-
-Language: T-SQL
-
-Techniques Used:
-
-Relational data modeling
-
-Views and layered analytical views
-
-CTEs (Common Table Expressions)
-
-Time-based aggregations
-
+Comprehensive Instrumentation Database
+A Microsoft SQL Server–based Instrumentation Asset Management, Maintenance Management, and Reliability Analytics System with a Python Tkinter Desktop Application.
+Overview
+The Comprehensive Instrumentation Database is an industrial database project designed for instrumentation engineers, maintenance engineers, database developers, and reliability professionals.
+The project demonstrates how Microsoft SQL Server can be used to build a normalized industrial database that supports:
+Instrument asset management
+Preventive and corrective maintenance
+Failure history management
+Reliability engineering
+Maintenance cost analysis
+Spare parts management
+Industrial analytics
+Desktop application development using Python
+The repository combines SQL Server database design with a modular Python desktop application that provides a graphical interface for managing instrumentation data.
+Features
+Database
+Fully normalized SQL Server database
+Relational data model
+Foreign key constraints
+Reference tables
+Transaction tables
+Analytical SQL Views
+Window Functions
 KPI calculations
-
-Target Consumers:
-
-Power BI / SSRS
-
-Python analytics (pandas, pyodbc)
-
-Web backends (e.g., Django)
-
-## 3. Data Model Overview
-
-The database follows a clean separation of concerns:
-
-3.1 Master (Reference) Data
-
-Defines what exists in the plant:
-
-Instruments
-
+Dashboard queries
+Instrumentation
+Instrument master data
+Instrument types
 Manufacturers
-
-Models
-
-Locations / units
-
+Process units
+Control systems
 Spare parts
-
-These tables are stable and change infrequently.
-
-3.2 Transactional Data
-
-Captures what happens over time:
-
+Calibration records
 Maintenance records
-
-Failures
-
-Downtime events
-
-Spare-part consumption
-
-Labor hours
-
-These tables form the historical backbone of the system.
-
-3.3 Analytical Views
-
-Transform raw data into decision-ready KPIs:
-
-MTTR per instrument
-
-Total downtime summaries
-
-Maintenance cost aggregation
-
-Labor utilization metrics
-
-Combined maintenance dashboard view
-
-Views are intentionally used to:
-
-Centralize business logic
-
-Simplify BI tool integration
-
-Ensure consistent KPI definitions
-
-## 4. Key KPIs Implemented
-
-The project includes SQL views that calculate:
-
-MTTR (Mean Time To Repair)
-
-Total Downtime (hours)
-
-Maintenance Cost per Instrument
-
-Average Labor Hours
-
-Short-term spare-part demand forecast (moving average)
-
-These KPIs reflect real industrial maintenance practices, not synthetic examples.
-
-## 5. Repository Structure (Recommended)
-
-/schema
-   01_tables.sql
-   02_constraints.sql
-
-/data
-   sample_instruments.sql
-   sample_maintenance.sql
-
-/views
-   v_MTTR.sql
-   v_DowntimeSummary.sql
-   v_MaintenanceDashboard.sql
-
-/security
-   create_roles.sql
-
-/docs
-   ER_diagram.png
-
-This structure supports:
-
-Easy setup
-
-Clear separation of concerns
-
-Professional maintainability
-
-## 6. How to Run the Project Locally
-
-1. Create an empty database in SQL Server
-CREATE DATABASE InstrumentationDB;
-
-2. Execute scripts in this order:
-
-Schema (tables & constraints)
-
-Sample data (optional)
-
-3. Validate objects:
-SELECT * FROM sys.tables;
-SELECT * FROM sys.views;
-
-4. Query the dashboard view:
-SELECT * FROM v_MaintenanceDashboard;
-
-## 7. Security Model (Example)
-
-The project demonstrates role-based access control:
-
-Analyst role: read-only access for reporting
-
-Writer role: controlled insert/update for maintenance data
-
-This reflects real enterprise security practices.
-
-##8. Design Decisions
-
-Views instead of stored procedures
-→ Better compatibility with BI tools and analytics workflows
-
-Normalized core + analytical layer
-→ Data integrity with analytics flexibility
-
-SQL Server
-→ Widely used in industrial and enterprise environments
-
-##9. Intended Use Cases
-
-Maintenance & reliability analytics
-
-Industrial data analysis portfolios
-
-SQL Developer / Data Analyst demonstrations
-
-Backend data source for dashboards and applications
-
-## 8. Design Decisions
-
-Views instead of stored procedures
-→ Better compatibility with BI tools and analytics workflows
-
-Normalized core + analytical layer
-→ Data integrity with analytics flexibility
-
-SQL Server
-→ Widely used in industrial and enterprise environments
-
-## 9. Intended Use Cases
-
-Maintenance & reliability analytics
-
-Industrial data analysis portfolios
-
-SQL Developer / Data Analyst demonstrations
-
-Backend data source for dashboards and applications
-
-## 10. About the Author
-
-This project is based on real industrial maintenance and instrumentation concepts and reflects:
-
-Practical domain knowledge
-
-Production-oriented SQL design
-
-Analytics-focused data modeling
-
-## Status
-
-Actively evolving — additional features such as indexing strategy, BI dashboards, and API integration can be layered on top.
+Failure records
+Analytics
+The project includes SQL queries for:
+MTTR
+MTBF
+Failure Frequency
+Downtime Analysis
+Maintenance Cost
+Labor Hours
+Spare Part Consumption
+Reliability KPIs
+Technology Stack
+Technology
+Description
+Microsoft SQL Server
+Relational Database
+T-SQL
+Database Programming
+Python
+Desktop Application
+Tkinter
+GUI Framework
+pyodbc
+SQL Server Connectivity
+Git
+Version Control
+GitHub
+Repository Hosting
+Repository Structure
+COMPREHENSIVE_INSTRUMENTATION_DATABASE
+│
+├── ANALYTICS/
+│
+├── Data_Modeling_and_Analytics/
+│
+├── INSERT/
+│
+├── QUERY/
+│
+├── VIEW/
+│
+├── WINDOW_Functions/
+│
+├── sql-schema/
+│
+├── MAINTENANCE&RELIABILITY_DASHBOARD/
+│
+├── Python_Project/
+│ │
+│ ├── db_connection.py
+│ ├── main.py
+│ ├── Instruments_form.py
+│ ├── FailureRecords_form.py
+│ ├── MaintenanceRecords_form.py
+│ ├── ...
+│
+├── SQLQuery_CREATE_DATABASE.sql
+│
+└── README.md
+Python Desktop Application
+The Python_Project directory contains a modular desktop application developed using Tkinter.
+Main Components
+db_connection.py
+Provides SQL Server connectivity using pyodbc.
+Responsible for:
+Opening database connections
+Connection reuse
+SQL Server authentication
+main.py
+Application entry point.
+Responsible for:
+Creating the main window
+Navigation
+Launching forms
+GUI Forms
+Each table has an independent CRUD interface.
+Examples:
+Instruments
+Failure Records
+Maintenance Records
+Calibration Records
+Manufacturers
+Spare Parts
+Each form supports:
+Insert
+Update
+Delete
+Search
+Clear Form
+Database Architecture
+                SQL Server
+                     │
+      ┌──────────────┴──────────────┐
+      │ │
+ Master Tables Transaction Tables
+      │ │
+      └──────────────┬──────────────┘
+                     │
+              Analytical Views
+                     │
+             Dashboard Queries
+                     │
+      Python Tkinter Desktop GUI
+Database Layers
+Reference Data
+Contains relatively static information.
+Examples
+Instruments
+Manufacturers
+Instrument Types
+Units
+Control Systems
+Transaction Data
+Stores operational history.
+Examples
+Maintenance Records
+Failure Records
+Calibration Records
+Spare Part Consumption
+Analytics Layer
+Provides reusable SQL Views for reporting.
+Examples
+MTTR
+Downtime
+Maintenance Costs
+Labor Utilization
+Failure Statistics
+Installation
+Requirements
+Microsoft SQL Server
+SQL Server Management Studio
+Python 3.11+
+ODBC Driver 17 or 18 for SQL Server
+Python Packages
+Install dependencies
+pip install pyodbc
+Database Setup
+Create the database.
+CREATE DATABASE ComprehensiveInstrumentationDB;
+Execute SQL scripts in the following order.
+Database creation
+Tables
+Constraints
+Reference data
+Sample data
+Views
+Analytical queries
+Running the Application
+Configure the SQL Server connection inside
+Python_Project/db_connection.py
+Update:
+SERVER = "YOUR_SERVER\\SQLEXPRESS"
+DATABASE = "ComprehensiveInstrumentationDB"
+Run
+python main.py
+Example Analytical Queries
+The repository demonstrates advanced SQL including
+JOINs
+Common Table Expressions (CTEs)
+Window Functions
+Aggregate Functions
+Ranking Functions
+Date Functions
+CASE Expressions
+Views
+KPI Calculations
+Intended Use Cases
+This repository can be used for
+Instrumentation Management
+Maintenance Engineering
+Reliability Engineering
+SQL Server Learning
+Database Design
+Python Database Applications
+Data Analytics
+Portfolio Demonstration
+Future Enhancements
+Planned improvements include
+Django Web Application
+REST API
+Power BI Dashboard
+Predictive Maintenance
+Machine Learning Models
+Inventory Optimization
+User Authentication
+Role-Based Access Control
+SQL Server Index Optimization
+Author
+Sardar Omrani
+Database Engineer | Instrumentation Maintenance Engineer
+Specializations
+Microsoft SQL Server
+Database Design
+Python Development
+Industrial Data Analytics
+Instrumentation Systems
+Maintenance & Reliability Engineering
+License
+This repository is provided for educational, research, and portfolio purposes
