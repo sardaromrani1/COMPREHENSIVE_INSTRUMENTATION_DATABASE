@@ -65,34 +65,73 @@ Repository Hosting
 
 # Repository Structure
 COMPREHENSIVE_INSTRUMENTATION_DATABASE
+
 │
+
 ├── ANALYTICS/
+
 │
+
 ├── Data_Modeling_and_Analytics/
+
 │
+
 ├── INSERT/
+
 │
+
 ├── QUERY/
+
 │
+
 ├── VIEW/
+
+
 │
+
 ├── WINDOW_Functions/
+
 │
+
 ├── sql-schema/
+
 │
+
 ├── MAINTENANCE&RELIABILITY_DASHBOARD/
+
 │
+
 ├── Python_Project/
-│ │
-│ ├── db_connection.py
-│ ├── main.py
-│ ├── Instruments_form.py
-│ ├── FailureRecords_form.py
-│ ├── MaintenanceRecords_form.py
-│ ├── ...
+
+│ 
 │
+
+│ 
+├── db_connection.py
+
+│ 
+
+├── main.py
+
+│ 
+├── Instruments_form.py
+
+│ 
+├── FailureRecords_form.py
+
+│ 
+├── MaintenanceRecords_form.py
+
+│ 
+
+├── ...
+
+│
+
 ├── SQLQuery_CREATE_DATABASE.sql
+
 │
+
 └── README.md
 
 # Python Desktop Application
